@@ -1,3 +1,70 @@
+$navbar-default-bg: #9E2D31;
+
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #ffffff;
+  text-decdoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url("railsbg.jpg");
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+#welcome {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-xlarge {
+  font-size: 1.7em;
+  background-color: $navbar-default-bg;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777777;
+}
+
+footer a:hover {
+  color: #222222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+  margin-left: 15px;
+}
