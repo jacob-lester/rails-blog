@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class CreateCategoriesTest < ActionDispatch::IntegrationTest
-  test "get new category form and create category" do 
+  def setup
+    @user = User.create(username: "john", email: "john@example.com", password: "password", admin: true)
+  end
+  
+  test "get new category form and create category" do
     get new_category_path
     assert_template 'categories/new'
     assert_difference 'Category.count', 1 do 
@@ -22,5 +26,4 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
     assert_select 'div.panel-body'
     
   end
-  
 end
